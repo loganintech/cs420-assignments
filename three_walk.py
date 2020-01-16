@@ -44,6 +44,7 @@ print(three_walk("s", "t", 0, should_be_true_graph))
 path.reverse()
 print(path)
 
+countmap = {}
 path.clear()
 
 print(three_walk("a", "b", 0, should_be_false))
