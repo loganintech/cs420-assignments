@@ -14,13 +14,8 @@ not_bipartite = {
 }
 
 def is_bipartite(v, g, parent_color):
-    # print(v, parent_color)
-    # print(g)
     if g[v]["color"] is None:
-        if parent_color == "red":
-            g[v]["color"] = "blue"
-        else:
-            g[v]["color"] = "red"
+        g[v]["color"] = not parent_color
     else:
         return g[v]["color"] != parent_color
 
@@ -30,5 +25,5 @@ def is_bipartite(v, g, parent_color):
 
     return True
 
-print(is_bipartite("a", yes_is_bipartite, "red"))
-print(is_bipartite("a", not_bipartite, "blue"))
+print(is_bipartite("a", yes_is_bipartite, True))
+print(is_bipartite("a", not_bipartite, False))

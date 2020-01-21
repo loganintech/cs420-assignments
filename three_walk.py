@@ -37,7 +37,6 @@ def three_walk(src, dst, length, g):
 
     return False
 
-
 path.append("t")
 
 print(three_walk("s", "t", 0, should_be_true_graph))
